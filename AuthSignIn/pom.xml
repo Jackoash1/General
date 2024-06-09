@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mycompany</groupId>
+    <artifactId>AuthSignIn</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.6.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>5.6.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.6.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+<!--    <build>
+    <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>LATEST</version>
+        <executions> -->
+            <!--first execution : for preparing JaCoCo runtime agent-->
+<!--            <execution>
+                <id>prepare-agent</id>
+                <goals>
+                    <goal>prepare-agent</goal>
+                </goals>
+            </execution> -->
+            <!--second execution : for creating code coverage reports-->
+<!--            <execution>
+                <id>report</id>
+                <phase>test</phase>
+                <goals>
+                    <goal>report</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+    </build>
+    <plugin>
+        <groupId>org.pitest</groupId>
+        <artifactId>pitest-maven</artifactId>
+        <version>LATEST</version>
+        <executions>
+            <execution>
+                <id>pit-report</id> -->
+                <!-- optional, this example attached the goal into mvn test phase -->
+<!--                <phase>test</phase>
+                <goals>
+                    <goal>mutationCoverage</goal>
+                </goals>
+            </execution>
+        </executions> -->
+        <!-- Need this to support JUnit 5 -->
+<!--        <dependencies>
+            <dependency>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-junit5-plugin</artifactId>
+                <version>0.15</version>
+            </dependency>
+        </dependencies>
+        <configuration>
+            <targetClasses>
+                <param>com.mycompany.*</param>
+            </targetClasses>
+            <targetTests>
+                <param>ssdt.lab4.*</param>
+            </targetTests>
+        </configuration>
+    </plugin> -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+        <exec.mainClass>com.mycompany.authsignin.AuthSignIn</exec.mainClass>
+    </properties>
+</project>
