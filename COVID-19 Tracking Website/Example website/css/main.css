@@ -1,0 +1,392 @@
+/* The basic variables we are going to be using. */
+
+/* Colour pallete has been taken from www.nordtheme.com  */
+:root {
+  /* Div Colours */
+  --bgGrey: #242832;
+  --fgGrey: #2e3440;
+  --lGrey: #3b4252;
+  --leGrey: #4c566a;
+
+  /* Font Colors */
+  --white: #d8dee9;
+  --bWhite: #e5e9f0;
+  --ebWhite: #eceff4;
+
+  /* Link/Button etc. colours */
+  --blue: #5e81ac;
+  --iceBlue: #88c0d0;
+  --lightBlue: #81a1c1;
+  --green: #8fbcbb;
+  --bGreen: #a3be8c;
+  --red: #bf616a;
+}
+
+* {
+  color: var(--white);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* General Settings */
+body {
+  background: var(--bgGrey);
+  position: relative;
+  padding-bottom: 145px;
+}
+
+.form-control {
+  color: var(--bgGrey);
+}
+
+.is-invalid,
+.invalid-feedback {
+  color: var(--red);
+}
+
+/* standard shadow settings */
+.shadow-std {
+  box-shadow: rgb(15 17 21 / 25%) 0px 4px 6px, rgb(15 17 21 / 10%) 0px 5px 7px;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  color: var(--lightBlue);
+}
+
+a:hover {
+  border-radius: 6px;
+  color: var(--iceBlue);
+  text-decoration: none;
+  transition: color 200ms ease-in-out 0s, background-color 200ms ease-in-out 0s;
+  transition-property: color, background-color;
+  background: var(--lGrey);
+  transition-duration: 200ms, 200ms;
+  transition-timing-function: ease-in-out, ease-in-out;
+  transition-delay: 0s, 0s;
+}
+
+.base-box {
+  border-radius: 6px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background: var(--fgGrey);
+}
+
+.image-box img {
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  opacity: 0.6;
+  border-radius: 6px;
+}
+
+.blu {
+  color: var(--iceBlue);
+}
+
+.red {
+  color: var(--red);
+}
+
+.bg-lighter {
+  background-color: var(--lGrey);
+}
+
+.br-6 {
+  border-radius: 6px;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: var(--bgGrey) !important;
+}
+
+.nav-item {
+  font-size: larger;
+}
+
+.navbar-nav {
+  justify-content: flex-end;
+}
+
+.nav-link {
+  color: var(--ebWhite) !important;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.navbar .navbar-brand img {
+  max-height: 50px;
+}
+.navbar .navbar-brand:hover {
+  background-color: var(--bgGrey);
+}
+
+.nav-link:hover {
+  color: var(--iceBlue) !important;
+  box-shadow: rgb(15 17 21 / 25%) 0px 4px 6px, rgb(15 17 21 / 10%) 0px 5px 7px;
+}
+
+/* Footer */
+
+.footer {
+  padding-top: 5px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: var(--lGrey);
+}
+
+.footer p,
+.footer ul,
+.footer a {
+  font-size: small;
+  margin: 0;
+}
+
+.footer .navbar-brand img {
+  max-height: 50px;
+}
+
+.footer ul {
+  padding: 0;
+}
+
+/* Index Page */
+#headerBox {
+  font-size: larger;
+}
+
+.header-list {
+  font-size: larger;
+  width: 100%;
+  text-align: center;
+}
+
+.header-list li {
+  color: var(--iceBlue);
+  justify-content: center;
+}
+/* Forms */
+
+.form-box {
+  max-width: 700px;
+  padding: 40px;
+}
+
+.btn {
+  background-color: var(--blue) !important;
+  border-color: var(--blue) !important;
+  min-width: 100px;
+}
+
+.btn:hover {
+  color: var(--ebWhite);
+}
+
+.form-box input[type="checkbox"],
+.form-box .form-check-label {
+  cursor: pointer;
+}
+
+.form-box h1,
+.form-box h2 {
+  text-align: center;
+}
+
+.form-box h2 {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+.form-box #success-msg {
+  color: var(--bGreen);
+}
+
+.form-box #empty-input-msg,
+#taken-details-msg {
+  color: #bf616a;
+}
+
+/* Store Page */
+
+.item-box {
+  min-height: 280px;
+  border-radius: 6px;
+  background-color: var(--fgGrey);
+  box-shadow: rgb(15 17 21 / 25%) 0px 4px 6px, rgb(15 17 21 / 10%) 0px 5px 7px;
+  align-self: center;
+  text-align: center;
+}
+
+.item-box a div {
+  border-radius: 6px;
+  opacity: 0.9;
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-box:hover {
+  background-color: var(--lGrey);
+}
+
+.item-box h5 {
+  color: var(--ebWhite);
+}
+.item-box p span {
+  color: var(--iceBlue);
+}
+
+/* Product Page */
+
+.product-box {
+  border-radius: 6px;
+  padding: 40px;
+  background-color: var(--fgGrey);
+}
+
+.product-box h4,
+.product-box h2 {
+  border-radius: 6px;
+  padding: 40px;
+  text-align: center;
+  background-color: var(--lGrey);
+}
+
+#imgHolder {
+  border-radius: 6px;
+  height: 600px;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#desc-box {
+  min-height: 425px;
+  border-radius: 6px;
+  background-color: var(--lGrey);
+}
+/* Make the layout better readable on average to small screens */
+@media (max-width: 900px) {
+  #imgHolder {
+    height: 300px;
+  }
+  .product-box {
+    padding: 10px;
+  }
+  .product-box h4,
+  .product-box h2 {
+    padding: 20px;
+  }
+}
+
+.product-box p {
+  color: var(--green);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Account Page */
+#userinfo {
+  max-width: 700px;
+}
+
+/* The user removal/update table */
+#deleteBtn {
+  background-color: var(--red) !important;
+  border-color: var(--red) !important;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr,
+th {
+  padding: 8px;
+  font-size: large;
+}
+
+tr:nth-child(even) {
+  background-color: var(--lGrey);
+}
+
+.usersTbl .red {
+  background-color: var(--red) !important;
+  border-color: var(--red) !important;
+}
+/* Standard Form */
+.user-form {
+  border-radius: 1px;
+  padding: 6px;
+  width: 100%;
+  background: none;
+  color: var(--white);
+  border: none;
+  border-bottom: 1px outset var(--ebWhite);
+  transition: color, border 0.5s;
+}
+.user-form:focus {
+  outline: none;
+  text-decoration: none;
+  color: var(--iceBlue);
+  border-color: var(--iceBlue);
+  transition-duration: 500ms;
+}
+/* Invalid input form */
+.user-form-invalid {
+  border-radius: 1px;
+  padding: 6px;
+  width: 100%;
+  background: none;
+  color: var(--red);
+  border: none;
+  border-bottom: 4px outset var(--red);
+  transition: color 0.5s;
+}
+
+.user-form-invalid:focus {
+  outline: none;
+  text-decoration: none;
+  color: var(--ebWhite);
+  border-color: var(--red);
+  transition-duration: 500ms;
+}
+/* Accepted Input Form */
+.user-form-valid {
+  border-radius: 1px;
+  padding: 6px;
+  width: 100%;
+  background: none;
+  color: var(--green);
+  border: none;
+  border-bottom: 4px outset var(--bGreen);
+  transition: color 0.5s;
+}
+
+.user-form-valid:focus {
+  outline: none;
+  text-decoration: none;
+  color: var(--ebWhite);
+  border-color: var(--green);
+  transition-duration: 500ms;
+}

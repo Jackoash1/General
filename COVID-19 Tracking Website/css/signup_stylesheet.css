@@ -1,0 +1,63 @@
+/* The body tag will have all text and backgrounds of webpages be the same for coherency and consistency */
+body {
+	background-color: white;
+	font-family: Tahoma, sans-serif;
+	font-size:32px;
+}
+/* h1 tags being the main big header of the webpage, all will look the same and be located in the same place */
+h1 {
+	position: absolute;
+	top: 0vh;
+	left: 45%;
+	width: 260px;
+	font-size: 45;
+	text-align: center;
+}
+/* The link ids will be primarily used to put each link in the exact same spot for consistency */
+#login{
+	position: absolute;
+	right:10%;
+	border: 3px solid black;
+	background-color: #737373
+}
+/* Bordered form for the login/signup page */
+form {
+	position: absolute;
+    text-align: left;
+    border-style: solid;
+    border-width: 5px;
+    display: inline-block;
+	top:15%;
+	left:38%;
+}
+/* Full-width inputs to look neat and tidy */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: #fa6e85;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size:24px;
+}
+/* Adding a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+/* This gives the signup link a border, making it look more tidy then before */
+.signup{
+	position:relative;
+	border: 3px solid black;
+	cursor: pointer;
+	text-align: center;
+	width:99%;
+}
