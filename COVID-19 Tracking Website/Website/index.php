@@ -21,8 +21,8 @@
         <?php include_once("./Map_page/form.php"); ?>
         <div id="darkener"></div>
     </div>
-    <iframe id="google-map-embed" width="450" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA-GdBSgDjdpLSvczF4JcBrdD967SA-wEQ&q=BD7" allowfullscreen>
-    </iframe>
+   <!-- src would = some form of google api <iframe id="google-map-embed" width="450" height="250" frameborder="0" style="border:0" src="" allowfullscreen>
+    </iframe> -->
 
     <!-- <div id="content"></div> -->
     <div id="graphsMenu">
