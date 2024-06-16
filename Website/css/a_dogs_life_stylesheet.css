@@ -1,0 +1,189 @@
+/* The body tag will have all text and backgrounds of webpages be the same for coherency and consistency */
+body {
+	background-color: grey;
+	font-family: Tahoma, sans-serif;
+	font-size:32px;
+}
+/* h1 tags being the main big header of the webpage, all will look the same and be located in the same place */
+h1 {
+	position: absolute;
+	top: 10vh;
+	left: 45%;
+	width: 260px;
+	font-size: 45;
+	text-align: center;
+}
+/* The link ids will be primarily used to put each link in the exact same spot for consistency */
+#leftLink{
+	position: absolute;
+	top:23vh;
+	left: 30%;
+	border: 3px solid black;
+	background-color: #737373
+}
+#rightLink{
+	position: absolute;
+	top:23vh;
+	right:28%;
+	border: 3px solid black;
+	background-color: #737373
+}
+#middleLink{
+	position: absolute;
+	top:23vh;
+	right:45%;
+	border: 3px solid black;
+	background-color: #737373
+}
+#login{
+	position: absolute;
+	right:10%;
+	border: 3px solid black;
+	background-color: #737373
+}
+/* a lot of ids are used to edit each seperate parts of text/images individually via CSS, moving them with vertical height or having it % based, giving them their own colour, or size */
+#mainText{
+	position: absolute;
+	top:46vh;
+	left:43%;
+	width: 400px;
+	text-align: center;
+	border: 3px solid black;
+	background-color: #737373;
+}
+#freddy{
+	position: absolute;
+	bottom:0%;
+	left:0%;
+	width:300px
+}
+#hercs{
+	position: absolute;
+	bottom:0%;
+	right:0%;
+	width:300px
+}
+#CEO{
+	position: absolute;
+	bottom:25%;
+	left:1%;
+}
+#CEOText{
+	bottom:12%;
+	width:550px;
+	text-color:white;
+}
+#CEOName{
+	position: absolute;
+	bottom:12%;
+}
+#CEOSkills{
+	position: absolute;
+	bottom:4%;
+	width: 550px;
+}
+#CEORole{
+	position: absolute;
+	bottom: 0%;
+}
+#carer{
+	position: absolute;
+	bottom: 25%;
+	left: 45%;
+}
+#carerName{
+	position: absolute;
+	bottom:12%;
+	left:45%;
+}
+#carerSkills{
+	position: absolute;
+	bottom:4%;
+	left:45%;
+	width:550px;
+}
+#carerRole{
+	position: absolute;
+	bottom:0%;
+	left:45%;
+}
+#admin{
+	position: absolute;
+	bottom: 25%;
+	right: 10%;
+}
+#adminName{
+	position: absolute;
+	bottom:17%;
+	right:9.5%;
+}
+#adminSkills{
+	position: absolute;
+	bottom:6%;
+	right:0%;
+	width:500px;
+}
+#adminRole{
+	position: absolute;
+	bottom:0%;
+	right:7.25%;
+}
+#maps{
+	position: absolute;
+	bottom: 2%;
+	left:2%;
+}
+#info{
+	position: relative;
+	top: 50%;
+	left: 40%;
+}
+#email{
+	position: absolute;
+	bottom: 5%;
+	right: 22.5%;
+}
+
+/* Bordered form for the login/signup page */
+form {
+	position: absolute;
+    text-align: left;
+    border-style: solid;
+    border-width: 5px;
+    display: inline-block;
+	background-color: #737373;
+	top:40%;
+	left:42%;
+}
+/* Full-width inputs to look neat and tidy */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size:24px;
+}
+/* Adding a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+/* This gives the signup link a border, making it look more tidy then before */
+.signup{
+	background-color: #737373;
+	position:relative;
+	border: 3px solid black;
+	cursor: pointer;
+	text-align: center;
+	width:99%;
+}

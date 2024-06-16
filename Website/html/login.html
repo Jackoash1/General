@@ -1,0 +1,37 @@
+<!-- This is copied and pasted to every webpage besides the <title> tag -->
+<html>
+<head>
+<link rel="stylesheet" href="../css/a_dogs_life_stylesheet.css">
+<title> Login </title>
+</head>
+<body>
+<a href="dogs_life_homepage.html">
+<img src="../../Pictures/Logo.png" alt="The logo of A Dogs Life" align="left" width="400px"/>
+</a>
+
+<h1>Login</h1>
+<!-- These 3 links are used a lot throughout the webpages, the id represents where they will be in order -->
+<h3 id="leftLink"><a href ="dogs_life_homepage.html"> Homepage </a></h3>
+<h3 id="rightLink"><a href="meet_the_team.html">Meet the Team</a></h3>
+<h3 id="middleLink"><a href="contact_us.html">Contact us<a></h3>
+
+<!-- Unable to use this properly, but was going to use this to check with the database to see if the user exists and if so does the password match, however other issues arrised to make this impossible  -->
+<div class="loginForm">
+<form method="post"  action="../php/databaseAdd.php">
+
+<!-- This combined with the CSS associated with it creates the login table, with required fields of the username and password -->
+<label for="uname"><b>Name:</b></label>
+<input type="text" name="username" placeholder="Username" name="uname" required><br>
+<label for="psw"><b>Password:</b></label>
+<input type="text" name="password" placeholder="Password" name="psw" required><br>
+<button type="submit">Login</button>
+
+<!-- A link for new users to signup -->
+<div class="signup">
+<p id="signup"><a href="signup.html">New Account</a></p>
+
+</div>
+</form>
+</div>
+</body>
+</html>

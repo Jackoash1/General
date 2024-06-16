@@ -1,0 +1,115 @@
+<html>
+<head>
+<link rel="stylesheet" href="../css/a_dogs_life_stylesheet.css">
+<title> Signup </title>
+
+<!-- This gives verification and validation to check if the php is operating properly -->
+<script language="JavaScript" type="text/JavaScript">
+function validate(userForm) {
+
+var div=document.getElementById("prodidmsg");
+div.style.color="red";
+if(div.hasChildNodes())
+{
+div.removeChild(div.firstChild);
+}
+if(userForm.productId.value.length ==0) // #11
+{
+div.appendChild(document.createTextNode("Name cannot be blank"));
+userForm.productId.focus();
+return false;
+}
+var div=document.getElementById("prodndmsg");
+div.style.color="red";
+if(div.hasChildNodes())
+{
+div.removeChild(div.firstChild);
+}
+if(userForm.productName.value.length ==0) // #11
+{
+div.appendChild(document.createTextNode("Name cannot be blank"));
+userForm.productName.focus();
+return false;
+}
+var div=document.getElementById("proddecmsg");
+div.style.color="red";
+if(div.hasChildNodes())
+{
+div.removeChild(div.firstChild);
+}
+if(userForm.productDesc.value.length ==0) // #11
+{
+div.appendChild(document.createTextNode("Name cannot be blank"));
+userForm.productDesc.focus();
+return false;
+}
+
+var div=document.getElementById("proqtymsg");
+div.style.color="red";
+if(div.hasChildNodes())
+{
+div.removeChild(div.firstChild);
+}
+if(userForm.productQty.value.length ==0) // #11
+{
+div.appendChild(document.createTextNode("Name cannot be blank"));
+userForm.productQty.focus();
+return false;
+}
+var div=document.getElementById("prodprimsg");
+div.style.color="red";
+if(div.hasChildNodes())
+{
+div.removeChild(div.firstChild);
+}
+if(userForm.productPrice.value.length ==0) // #11
+{
+div.appendChild(document.createTextNode("Name cannot be blank"));
+userForm.productPrice.focus();
+return false;
+}
+
+return true;
+}
+</script>
+</head>
+<script>
+var password = document.getElementById("password")
+	, confirm_password = document.getElementById("confirm_password");
+	
+function validatePassword(){
+	if(password.value != confirm_password.value){
+		confirm_password.setCustomValidity("Passwords Do Not Match");
+	} else {
+		confirm_password.setCustomValidity('');
+	}
+}
+</script>
+<body>
+<h1>Signup</h1>
+
+<!-- Similarly to the login form, this allows the user to input their own username, password and email and should go to the database to submit all of this -->
+<div class="loginForm">
+<form method="post"  action="../php/databaseAdd.php" onsubmit="return validate(this);">
+<label for="uname"><b>Name:</b></label>
+<input type="text" name="username" placeholder="First and Last name" name="uname" required><br>
+
+<label for="pswd1"><b>Password:</b></label>
+<input type="password" name="password" placeholder="Password" onkeyup='confirmPass();' required><br>
+<label for="pswd2"><b>Confirm Password:</b></label>
+<input type="password" name="confirm_password" placeholder="Confirm Password" onkeyup='confirmPass();' required><br>
+<span id='message'></span>
+
+<label for="eml"><b>Email:</b><label>
+<input type="text" name="email" placeholder="Email" name="eml" required><br>
+
+<button type="submit" onclick="validatePassword()">Signup</button>
+<div class="signup">
+
+<!-- Web link to sign in if the user already has an account -->
+<p>Already have an account?</p>
+<p><a href="login.html">Sign in</a></p>
+</form>
+</div>
+</body>
+</html>

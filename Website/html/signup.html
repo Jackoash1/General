@@ -1,0 +1,105 @@
+<html>
+<head>
+<link rel="stylesheet" href="../css/a_dogs_life_stylesheet.css">
+<title> Signup </title>
+
+<!-- This gives verification and validation to check if the php is operating properly -->
+<script language="JavaScript" type="text/JavaScript">
+function validate(userForm) {
+
+var div=document.getElementById("prodidmsg");
+div.style.color="red";
+if(div.hasChildNodes())
+{
+div.removeChild(div.firstChild);
+}
+if(userForm.productId.value.length ==0) // #11
+{
+div.appendChild(document.createTextNode("Name cannot be blank"));
+userForm.productId.focus();
+return false;
+}
+var div=document.getElementById("prodndmsg");
+div.style.color="red";
+if(div.hasChildNodes())
+{
+div.removeChild(div.firstChild);
+}
+if(userForm.productName.value.length ==0) // #11
+{
+div.appendChild(document.createTextNode("Name cannot be blank"));
+userForm.productName.focus();
+return false;
+}
+var div=document.getElementById("proddecmsg");
+div.style.color="red";
+if(div.hasChildNodes())
+{
+div.removeChild(div.firstChild);
+}
+if(userForm.productDesc.value.length ==0) // #11
+{
+div.appendChild(document.createTextNode("Name cannot be blank"));
+userForm.productDesc.focus();
+return false;
+}
+
+var div=document.getElementById("proqtymsg");
+div.style.color="red";
+if(div.hasChildNodes())
+{
+div.removeChild(div.firstChild);
+}
+if(userForm.productQty.value.length ==0) // #11
+{
+div.appendChild(document.createTextNode("Name cannot be blank"));
+userForm.productQty.focus();
+return false;
+}
+var div=document.getElementById("prodprimsg");
+div.style.color="red";
+if(div.hasChildNodes())
+{
+div.removeChild(div.firstChild);
+}
+if(userForm.productPrice.value.length ==0) // #11
+{
+div.appendChild(document.createTextNode("Name cannot be blank"));
+userForm.productPrice.focus();
+return false;
+}
+
+return true;
+}
+</script>
+</head>
+
+<body>
+<a href="dogs_life_homepage.html">
+<img src="../../Pictures/Logo.png" alt="The logo of A Dogs Life" align="left" width="400px"/>
+</a>
+<h1>Signup</h1>
+<!-- These 3 links are used a lot throughout the webpages, the id represents where they will be in order -->
+<h3 id="leftLink"><a href ="dogs_life_homepage.html"> Homepage </a></h3>
+<h3 id="rightLink"><a href="meet_the_team.html">Meet the Team</a></h3>
+<h3 id="middleLink"><a href="contact_us.html">Contact us<a></h3>
+
+<!-- Similarly to the login form, this allows the user to input their own username, password and email and should go to the database to submit all of this -->
+<div class="loginForm">
+<form method="post"  action="../php/databaseAdd.php" onsubmit="return validate(this);">
+<label for="uname"><b>Name:</b></label>
+<input type="text" name="username" placeholder="Username" name="uname" required><br>
+<label for="psw"><b>Password:</b></label>
+<input type="text" name="password" placeholder="Password" name="psw" required><br>
+<label for="eml"><b>Email:</b><label>
+<input type="text" name="email" placeholder="Email" name="eml" required><br>
+<button type="submit">Signup</button>
+<div class="signup">
+
+<!-- Web link to sign in if the user already has an account -->
+<p>Already have an account?</p>
+<p><a href="login.html">Sign in</a></p>
+</form>
+</div>
+</body>
+</html>
